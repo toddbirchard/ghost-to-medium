@@ -10,7 +10,6 @@ requests="*"
 flask="*"
 configparser="*"
 pytest="*"
-flask_redis="*"
 
 [requires]
 python_version = "3.7"

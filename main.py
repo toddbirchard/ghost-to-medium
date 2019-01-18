@@ -5,7 +5,7 @@ import os
 
 
 def main(request):
-    """From ghost to medium."""
+    """From G   host to Medium."""
     title = request.form.get('title')
     content = request.form.get('content')
     tags = request.form.get('tags')
@@ -28,4 +28,4 @@ def main(request):
 
     prepped = Request('POST', url=endpoint, headers=headers, data=data)
     req = requests.get(url=endpoint, headers=headers, data=data)
-    return make_response(prepped, 200, content_type='application/json')
+    return make_response(prepped, 200, 'durrr')
