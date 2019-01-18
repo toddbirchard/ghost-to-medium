@@ -29,6 +29,6 @@ def main(request):
     # prepped = Request('POST', url=endpoint, headers=headers, data=data)
     # prep = prepped.prepare()
     # print(prep.url, prep.body, prep.headers, prep.method)
-    req = requests.get(url=endpoint, headers=headers, data=data)
+    req = requests.post(url=endpoint, headers=headers, data=data)
     response = req.json()
     return response
