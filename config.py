@@ -1,4 +1,4 @@
-from configparse import ConfigParser
+from configparser import ConfigParser
 import os
 
 configParser = ConfigParser()
