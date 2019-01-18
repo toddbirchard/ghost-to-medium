@@ -30,12 +30,12 @@ def main(request):
     # prepped = Request('POST', url=endpoint, headers=headers, data=data)
     # prep = prepped.prepare()
     # print(prep.url, prep.body, prep.headers, prep.method)
-    req = requests.post(url=endpoint, headers=headers, data=data)
+    req = requests.post(url=endpoint, headers=json.dumps(headers), data=json.dumps(data))
     response = req.content
     create_response = {
-        'endpoint': endpoint,
-        'headers': headers,
-        'data': data,
-        'response': response
+        'endpoint': json.dumps(endpoint),
+        'headers': json.dumps(headers),
+        'data': json.dumps(data),
+        'response': json.dumps(response)
     }
     return create_response
