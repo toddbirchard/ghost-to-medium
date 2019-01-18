@@ -31,7 +31,7 @@ def main(request):
     # prep = prepped.prepare()
     # print(prep.url, prep.body, prep.headers, prep.method)
     req = requests.post(url=endpoint, headers=headers, data=data)
-    response = req.json()
+    response = req.content
     create_response = {
         'endpoint': endpoint,
         'headers': headers,
