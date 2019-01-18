@@ -1,21 +1,35 @@
-from bs4 import BeautifulSoup
+from flask import request
 import pytest
 import requests
+from . import app
 
 
 @pytest.mark.parametrize("request_string", 'https://hackersandslackers.com/?title=title&content=this is content&url=www.url.com&tags=[fhskjgfgfdg,dfg,df]')
 def test_inspect_html(request_string):
     """Inspect html of incoming page."""
+    title = request.form.get('title')
+    content = request.form.get('content')
+    tags = request.form.get('tags')
+    url = request.form.get('url')
+    endpoint = 'https://api.medium.com/v1/publications/' + r.get('publication') + '/posts'
     headers = {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Max-Age': '3600',
-        'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+        'Authorization': r.get('token'),
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Accept-Charset': 'utf-8'
     }
-    r = requests.get(request_string, headers=headers)
-    soup = BeautifulSoup(r.content, 'html.parser')
-    assert soup.prettify()
+    data = {
+        "title": title,
+        "contentFormat": "html",
+        "content": content,
+        "tags": tags,
+        "publishStatus": "draft",
+        "canonicalUrl": url
+    }
+
+    prepped = Request('POST', url=endpoint, headers=headers, data=data)
+    req = requests.get(url=endpoint, headers=headers, data=data)
+    return make_response(prepped, 200, content_type='application/json')
 
 
 if __name__ == '__main__':

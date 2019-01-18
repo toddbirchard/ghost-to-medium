@@ -1,7 +1,7 @@
 import os
 import tempfile
 import pytest
-from .main import app
+import app
 
 
 @pytest.fixture
@@ -11,5 +11,3 @@ def client():
 
     with app.app_context():
         yield client
-
-    os.close(db_fd)
