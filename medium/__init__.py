@@ -15,8 +15,8 @@ def create_app():
         r.init_app(app, charset="utf-8", decode_responses=True)
 
         # Set global contexts
-        r.set('uri', app.config['SQLALCHEMY_DATABASE_URI'])
-        r.set('baseurl',  app.config['BASE_URL'])
+        r.set('token', app.config['TOKEN'])
+        r.set('publication',  app.config['PUBLICATION'])
 
         # Import our modules
         from . import app

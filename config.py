@@ -11,5 +11,4 @@ TESTING = True
 
 TOKEN = os.environ.get('TOKEN')
 PUBLICATION = os.environ.get('PUBLICATION')
-
 REDIS_URL = os.environ.get('REDIS_URL')
