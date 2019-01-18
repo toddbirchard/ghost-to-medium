@@ -27,5 +27,7 @@ def main(request):
     }
 
     prepped = Request('POST', url=endpoint, headers=headers, data=data)
+    prep = prepped.prepare()
+    print(prep.url, prep.body, prep.headers, prep.method)
     req = requests.get(url=endpoint, headers=headers, data=data)
     return make_response(prepped, 200, 'durrr')
