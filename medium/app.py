@@ -1,7 +1,6 @@
 from flask import make_response, request
 import requests
 from requests import Request
-import config
 from . import r
 
 
