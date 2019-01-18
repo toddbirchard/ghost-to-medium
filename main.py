@@ -31,4 +31,4 @@ def main(request):
     # print(prep.url, prep.body, prep.headers, prep.method)
     req = requests.get(url=endpoint, headers=headers, data=data)
     response = req.json()
-    return make_response(str(response), 200, 'durrr')
+    return response
