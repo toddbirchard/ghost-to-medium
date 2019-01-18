@@ -1,7 +1,7 @@
 from flask import make_response, request
 import json
 import requests
-from requests import Requests
+from requests import Request
 import config
 
 
@@ -27,6 +27,6 @@ def main(request):
         "canonicalUrl": url
     }
 
-    prepped = Requests('POST', url=endpoint, headers=headers, data=data)
+    prepped = Request('POST', url=endpoint, headers=headers, data=data)
     req = requests.get(url=endpoint, headers=headers, data=data)
     return make_response(prepped, 200, content_type='application/json')
