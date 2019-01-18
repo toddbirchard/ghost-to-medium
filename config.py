@@ -8,3 +8,6 @@ configParser.read(configFilePath)
 
 DEBUG = True
 TESTING = True
+
+TOKEN = os.environ.get('TOKEN')
+PUBLICATION = os.environ.get('PUBLICATION')
