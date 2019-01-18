@@ -2,10 +2,11 @@ from flask import make_response, request
 import requests
 from requests import Request
 import os
+import json
 
 
 def main(request):
-    """From G   host to Medium."""
+    """From Ghost to Medium."""
     title = request.form.get('title')
     content = request.form.get('content')
     tags = request.form.get('tags')
@@ -31,4 +32,10 @@ def main(request):
     # print(prep.url, prep.body, prep.headers, prep.method)
     req = requests.post(url=endpoint, headers=headers, data=data)
     response = req.json()
-    return response
+    create_response = {
+        'endpoint': endpoint,
+        'headers': headers,
+        'data': data,
+        'response': response
+    }
+    return create_response
