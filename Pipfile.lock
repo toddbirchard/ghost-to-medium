@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b696ebd083a55360870aaa3457e19c74d993a2699584ae50b0c7ad66ea3e6962"
+            "sha256": "c926282f78a6a57559a30523470040ee1910dd06ab01f9ee5a42aefe958e09d8"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7"
+            "python_version": "3.7.2"
         },
         "sources": [
             {
@@ -65,6 +65,14 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
+        },
+        "flask-redis": {
+            "hashes": [
+                "sha256:56ebd5e69a42988e9a7a904f07b37cd625a7dbcdfbfe31797885c3c4a92516f5",
+                "sha256:ffb8e636c7af0226a3074860200602850a5a871169bc53fcde05b7d973aad714"
+            ],
+            "index": "pypi",
+            "version": "==0.3.0"
         },
         "idna": {
             "hashes": [
@@ -128,6 +136,13 @@
             ],
             "version": "==5.0.0"
         },
+        "oauthlib": {
+            "hashes": [
+                "sha256:0a8b2e0daa7afb62bd1b0b387b7a3723fa9a35d1183694ca5a5c8e3d6df59913",
+                "sha256:8932fb34f7c6a4fc50c9f423b105923ed2e6df091b3c388d182540db02c581a0"
+            ],
+            "version": "==3.0.0"
+        },
         "pluggy": {
             "hashes": [
                 "sha256:8ddc32f03971bfdf900a81961a48ccf2fb677cf7715108f85295c67405798616",
@@ -150,6 +165,13 @@
             "index": "pypi",
             "version": "==4.1.1"
         },
+        "redis": {
+            "hashes": [
+                "sha256:2100750629beff143b6a200a2ea8e719fcf26420adabb81402895e144c5083cf",
+                "sha256:8e0bdd2de02e829b6225b25646f9fb9daffea99a252610d040409a6738541f0a"
+            ],
+            "version": "==3.0.1"
+        },
         "requests": {
             "hashes": [
                 "sha256:502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e",
@@ -157,6 +179,14 @@
             ],
             "index": "pypi",
             "version": "==2.21.0"
+        },
+        "requests-oauthlib": {
+            "hashes": [
+                "sha256:bd6533330e8748e94bf0b214775fed487d309b8b8fe823dc45641ebcd9a32f57",
+                "sha256:d3ed0c8f2e3bbc6b344fa63d6f933745ab394469da38db16bdddb461c7e25140"
+            ],
+            "index": "pypi",
+            "version": "==1.2.0"
         },
         "six": {
             "hashes": [

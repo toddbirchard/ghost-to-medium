@@ -10,6 +10,8 @@ requests="*"
 flask="*"
 configparser="*"
 pytest="*"
+requests_oauthlib="*"
+flask_redis="*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.7.2"

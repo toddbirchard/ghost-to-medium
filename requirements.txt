@@ -10,13 +10,14 @@ idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10
 MarkupSafe==1.1.0
-medium==0.3.0
 more-itertools==5.0.0
+oauthlib==3.0.0
 pluggy==0.8.1
 py==1.7.0
 pytest==4.1.1
 redis==3.0.1
 requests==2.21.0
+requests-oauthlib==1.2.0
 six==1.12.0
 urllib3==1.24.1
 Werkzeug==0.14.1
