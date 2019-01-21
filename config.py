@@ -12,11 +12,11 @@ class Config:
     DEBUG = True
     TESTING = True
 
-    TOKEN = configParser.get('MEDIUM', 'TOKEN')
-    CLIENT_ID = configParser.get('MEDIUM', 'CLIENT_ID')
-    CLIENT_SECRET = configParser.get('MEDIUM', 'CLIENT_SECRET')
-    PUBLICATION = configParser.get('MEDIUM', 'PUBLICATION')
+    TOKEN = os.environ['TOKEN']
+    CLIENT_ID = os.environ['CLIENT_ID']
+    CLIENT_SECRET = os.environ['CLIENT_SECRET']
+    PUBLICATION = os.environ['PUBLICATION']
 
-    REDIS_URL = configParser.get('DATABASE', 'REDIS_URL')
+    REDIS_URL = os.environ['REDIS_URL']
 
-    ME_ENDPOINT = configParser.get('ENDPOINTS', 'ME_ENDPOINT')
+    ME_ENDPOINT = os.environ['ME_ENDPOINT']
