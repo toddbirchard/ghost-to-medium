@@ -15,12 +15,11 @@ def create_app():
         r.init_app(app, charset="utf-8", decode_responses=True)
 
         # Set global contexts
-        r.set('token', app.config['TOKEN'])
-        r.set('clientid', app.config['CLIENT_ID'])
-        r.set('clientsecret', app.config['CLIENT_SECRET'])
-        r.set('publication', app.config['PUBLICATION'])
-        r.set('endpoint_me', app.config['ME_ENDPOINT'])
-
+        r.set('medium_token', app.config['TOKEN'])
+        r.set('medium_client_id', app.config['CLIENT_ID'])
+        r.set('medium_client_secret', app.config['CLIENT_SECRET'])
+        r.set('medium_publication', app.config['PUBLICATION'])
+        r.set('medium_endpoint_me', app.config['ME_ENDPOINT'])
 
         # Import our modules
         from . import main

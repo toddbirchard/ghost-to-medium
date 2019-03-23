@@ -8,10 +8,10 @@ import json
 @app.route('/', methods=['GET'])
 def get_user_details():
     """Get details of current user."""
-    endpoint = r.get('endpoint_me')
-    token = r.get('token')
+    endpoint = r.get('medium_endpoint_me')
+    token = r.get('medium_token')
     headers = {
-        'Authorization': r.get('token'),
+        'Authorization': token,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Accept-Charset': 'utf-8'
@@ -24,15 +24,13 @@ def get_user_details():
 
 @app.route('/publish', methods=['POST', 'GET'])
 def publish_post():
-    """Publish post to medium."""
-    post_data = request.data
-    data_dict = json.loads(post_data)
-    title = data_dict['title']
-    content = data_dict['content']
-    contentFormat = data_dict['contentFormat']
-    tags = data_dict['tags']
-    token = r.get('token')
-    publication = r.get('publication')
+    """Publish post to Medium."""
+    request_data = json.loads(request.data)
+    title = request_data['title']
+    content = request_data['content']
+    tags = request_data['tags']
+    token = r.get('medium_token')
+    publication = r.get('medium_publication')
     endpoint = 'https://api.medium.com/v1/publications/' + publication + '/posts'
     headers = {
         'Authorization': token,

@@ -1,2 +1,5 @@
 config.ini
 Pipfile.lock
+.idea
+.DS_Store
+.webassets-cache

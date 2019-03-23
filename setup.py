@@ -6,17 +6,17 @@ with open("README", 'r') as f:
 setup = (
     name='ghost-to-medium',
     version='1.0',
-    description='Generates a JSON object containing link preview information by passing a URL parameter.',
+    description='Endpoint which creates a post in a Medium publication.',
     long_description=long_description,
     author='Todd Birchard',
     author_email='toddbirchard@gmail.com',
-    url="https://github.com/toddbirchard/Link-Preview-API",
-    packages=['medium', 'tests'],
+    url="https://github.com/toddbirchard/ghost-to-medium",
+    packages=['medium'],
     tests_require=["pytest"],
     cmdclass={"pytest": PyTest},
     install_requires=[
         "requests",
         "flask",
-        "configparser"
+        "flask_redis"
     ]
 )
